@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Abdullah — Growth & IT Solutions"
+description = "A polished personal portfolio for Abdullah, showcasing offshore team scaling, lead generation, platform optimization, and revenue pipeline services for technology companies."
+version = "1.0.0"
+id = "artifacts/abdullah-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18472
+
+[services.development]
+run = "pnpm --filter @workspace/abdullah-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/abdullah-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/abdullah-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18472"
+BASE_PATH = "/"

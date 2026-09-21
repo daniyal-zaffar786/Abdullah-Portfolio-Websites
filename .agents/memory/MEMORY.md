@@ -1,0 +1,1 @@
+- [Portfolio contact delivery](portfolio-contact-delivery.md) — keep static contact submissions explicit about opening an email draft unless a real mail backend is configured.

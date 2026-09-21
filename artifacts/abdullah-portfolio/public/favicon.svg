@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <polygon points="32,2 58,17 58,47 32,62 6,47 6,17" fill="#0d2010" stroke="#318B43" stroke-width="1.5"/>
+  <polygon points="32,6 54,19 54,45 32,58 10,45 10,19" fill="#0d2010" stroke="#F5A623" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+  <text x="9" y="43" font-family="Arial Black,sans-serif" font-weight="900" font-size="21" fill="white">A</text>
+  <text x="24" y="43" font-family="Arial Black,sans-serif" font-weight="900" font-size="21" fill="#318B43">M</text>
+  <text x="42" y="43" font-family="Arial Black,sans-serif" font-weight="900" font-size="21" fill="#F5A623">A</text>
+  <circle cx="32" cy="3" r="2.2" fill="#318B43"/>
+  <circle cx="58" cy="17" r="2.2" fill="#318B43"/>
+  <circle cx="58" cy="47" r="2.2" fill="#F5A623"/>
+  <circle cx="32" cy="61" r="2.2" fill="#F5A623"/>
+  <circle cx="6" cy="47" r="2.2" fill="#318B43"/>
+  <circle cx="6" cy="17" r="2.2" fill="#318B43"/>
+</svg>
