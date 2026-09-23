@@ -37,21 +37,21 @@ const HERO_TITLES = [
   "Turn Your B2B Business Into a 3X Revenue Engine",
   "3X Your B2B Revenue With a Smarter Growth Strategy",
   "Want More Revenue From Your B2B Business or Upwork Profile?",
-  "From Current Revenue to 3X Growth — Let’s Build It",
+  "From Current Revenue to 3X Growth, Let’s Build It",
   "Unlock 3X Revenue Growth for Your B2B Business",
   "3X Your Upwork Revenue With a Proven Growth System",
   "Scale Your B2B Business From Where You Are to 3X",
   "Is Your B2B Business Ready for 3X Revenue Growth?",
-  "Stop Leaving Revenue on the Table — Target 3X Growth",
+  "Stop Leaving Revenue on the Table, Target 3X Growth",
   "Build a Predictable 3X Revenue Pipeline",
-  "Turn Your Upwork Profile Into a Revenue-Generating Machine",
+  "Turn Your Upwork Profile Into a Revenue Generating Machine",
   "3X Your Client Acquisition. 3X Your Revenue Potential.",
   "Want to Go From Inconsistent Leads to 3X Revenue?",
   "What Would 3X Revenue Do for Your Business?",
   "Your Next 3X Revenue Growth Starts Here",
   "You Have the Skills. Let’s Build 3X the Revenue.",
   "From Profile Views to Clients. From Clients to 3X Revenue.",
-  "Your Business Doesn’t Need More Effort — It Needs More Revenue.",
+  "Your Business Doesn’t Need More Effort, It Needs More Revenue.",
 ];
 
 const WORLD_COUNTRIES = [
@@ -122,7 +122,7 @@ const WORLD_COUNTRIES = [
   { flag: "🇬🇩", name: "Grenada", code: "+1-473" },
   { flag: "🇬🇹", name: "Guatemala", code: "+502" },
   { flag: "🇬🇳", name: "Guinea", code: "+224" },
-  { flag: "🇬🇼", name: "Guinea-Bissau", code: "+245" },
+  { flag: "🇬🇼", name: "Guinea, Bissau", code: "+245" },
   { flag: "🇬🇾", name: "Guyana", code: "+592" },
   { flag: "🇭🇹", name: "Haiti", code: "+509" },
   { flag: "🇭🇳", name: "Honduras", code: "+504" },
@@ -227,7 +227,7 @@ const WORLD_COUNTRIES = [
   { flag: "🇹🇯", name: "Tajikistan", code: "+992" },
   { flag: "🇹🇿", name: "Tanzania", code: "+255" },
   { flag: "🇹🇭", name: "Thailand", code: "+66" },
-  { flag: "🇹🇱", name: "Timor-Leste", code: "+670" },
+  { flag: "🇹🇱", name: "Timor, Leste", code: "+670" },
   { flag: "🇹🇬", name: "Togo", code: "+228" },
   { flag: "🇹🇴", name: "Tonga", code: "+676" },
   { flag: "🇹🇹", name: "Trinidad and Tobago", code: "+1-868" },
@@ -252,8 +252,8 @@ const WORLD_COUNTRIES = [
 ];
 
 const PAIN_POINTS = [
-  { num: "01", title: "I can help you win more qualified work", desc: "I can analyze your Upwork presence, sharpen your positioning, and build a proposal strategy that puts your expertise in front of better-fit clients." },
-  { num: "02", title: "I can help you scale without unnecessary overhead", desc: "I can source and coordinate pre-vetted offshore professionals so you can expand delivery capacity without carrying the full cost and risk of local hiring." },
+  { num: "01", title: "I can help you win more qualified work", desc: "I can analyze your Upwork presence, sharpen your positioning, and build a proposal strategy that puts your expertise in front of better fit clients." },
+  { num: "02", title: "I can help you scale without unnecessary overhead", desc: "I can source and coordinate pre vetted offshore professionals so you can expand delivery capacity without carrying the full cost and risk of local hiring." },
   { num: "03", title: "I can build a pipeline you can rely on", desc: "I can develop a practical business development system across LinkedIn, email, and freelance platforms so your next opportunity does not depend on referrals or luck." },
 ];
 
@@ -263,7 +263,7 @@ const WHO_I_SERVE_PAINS = [
   "I can help you access specialized technology talent faster",
   "I can give you flexible resources for changing project demands",
   "I can build a consistent lead and revenue pipeline",
-  "I can optimize low-conversion Upwork and Fiverr profiles",
+  "I can optimize low conversion Upwork and Fiverr profiles",
 ];
 
 const PERSONAS = [
@@ -276,10 +276,10 @@ const PERSONAS = [
 const SERVICES = [
   { icon: <Users className="w-7 h-7" />, title: "Offshore Team Scaling & Staff Augmentation", desc: "I can source, vet, and coordinate IT professionals who fit your workflows and delivery standards. I can help you add capacity quickly while keeping quality, communication, and cost under control.", tag: "Staff Augmentation", video: "/animations/service-staff.mp4", poster: "/animations/service-staff.jpg", videoLabel: "Build delivery capacity" },
   { icon: <Target className="w-7 h-7" />, title: "Precision Lead Generation", desc: "I can build targeted B2B lead lists and outreach campaigns using LinkedIn Sales Navigator, Apollo.io, and ZoomInfo, then refine the messaging that turns cold prospects into qualified conversations.", tag: "Lead Generation", video: "/animations/service-growth.mp4", poster: "/animations/service-growth.jpg", videoLabel: "Create a qualified pipeline" },
-  { icon: <TrendingUp className="w-7 h-7" />, title: "Upwork Profile & Platform Optimization", desc: "I can optimize your Upwork, Fiverr, Freelancer, Guru, and PeoplePerHour presence with stronger positioning, search-friendly copy, focused proposals, and a bidding process designed to improve conversion.", tag: "Upwork Expert", video: "/animations/service-growth.mp4", poster: "/animations/service-growth.jpg", videoLabel: "Win better-fit work" },
-  { icon: <BarChart3 className="w-7 h-7" />, title: "Long-Term Revenue Pipelines", desc: "I can develop a practical business development system across LinkedIn, email, and freelance platforms so you have a consistent flow of qualified opportunities instead of one-off wins.", tag: "Sales Pipeline", video: "/animations/service-revenue.mp4", poster: "/animations/service-revenue.jpg", videoLabel: "Turn activity into revenue" },
-  { icon: <Globe className="w-7 h-7" />, title: "Resource Outsourcing", desc: "I can design and coordinate outsourcing support for your IT operation, from individual specialists to complete offshore pods, matched to your project scope, timelines, and long-term goals.", tag: "Outsourcing", video: "/animations/service-staff.mp4", poster: "/animations/service-staff.jpg", videoLabel: "Scale without overhead" },
-  { icon: <Bot className="w-7 h-7" />, title: "AI-Driven Sales Automation", desc: "I can develop practical workflows, chatbots, and multi-channel sequences that keep your pipeline responsive and organized without requiring you to add another layer of headcount.", tag: "Sales Automation", video: "/animations/service-revenue.mp4", poster: "/animations/service-revenue.jpg", videoLabel: "Keep follow-up moving" },
+  { icon: <TrendingUp className="w-7 h-7" />, title: "Upwork Profile & Platform Optimization", desc: "I can optimize your Upwork, Fiverr, Freelancer, Guru, and PeoplePerHour presence with stronger positioning, search friendly copy, focused proposals, and a bidding process designed to improve conversion.", tag: "Upwork Expert", video: "/animations/service-growth.mp4", poster: "/animations/service-growth.jpg", videoLabel: "Win better fit work" },
+  { icon: <BarChart3 className="w-7 h-7" />, title: "Long Term Revenue Pipelines", desc: "I can develop a practical business development system across LinkedIn, email, and freelance platforms so you have a consistent flow of qualified opportunities instead of one off wins.", tag: "Sales Pipeline", video: "/animations/service-revenue.mp4", poster: "/animations/service-revenue.jpg", videoLabel: "Turn activity into revenue" },
+  { icon: <Globe className="w-7 h-7" />, title: "Resource Outsourcing", desc: "I can design and coordinate outsourcing support for your IT operation, from individual specialists to complete offshore pods, matched to your project scope, timelines, and long term goals.", tag: "Outsourcing", video: "/animations/service-staff.mp4", poster: "/animations/service-staff.jpg", videoLabel: "Scale without overhead" },
+  { icon: <Bot className="w-7 h-7" />, title: "AI Driven Sales Automation", desc: "I can develop practical workflows, chatbots, and multi channel sequences that keep your pipeline responsive and organized without requiring you to add another layer of headcount.", tag: "Sales Automation", video: "/animations/service-revenue.mp4", poster: "/animations/service-revenue.jpg", videoLabel: "Keep follow up moving" },
 ];
 
 const ENGAGEMENT_STEPS = [
@@ -398,7 +398,7 @@ const TOOL_STACKS = [
   { category: "Lead Generation", tools: "LinkedIn Sales Navigator, ZoomInfo, Apollo.io, Skrapp.io, ContactOut, SignalHire, Snov.io" },
   { category: "Email & Outreach", tools: "Instantly.ai, Mailchimp, ZeroBounce" },
   { category: "CRM & Sales Operations", tools: "Salesforce, HubSpot" },
-  { category: "Automation & AI", tools: "AI-driven workflows, chatbots, and automated outreach sequences" },
+  { category: "Automation & AI", tools: "AI driven workflows, chatbots, and automated outreach sequences" },
 ];
 
 const FOOTER_PLATFORM_GROUPS = [
@@ -465,9 +465,9 @@ const WHY_ME = [
 ];
 
 const FAQS = [
-  { q: "How quickly can you deploy offshore teams?", a: "I can usually introduce pre-vetted professionals within 2 to 4 weeks, depending on the roles, volume, geography, and onboarding requirements." },
+  { q: "How quickly can you deploy offshore teams?", a: "I can usually introduce pre vetted professionals within 2 to 4 weeks, depending on the roles, volume, geography, and onboarding requirements." },
   { q: "Which clients can you help most?", a: "I work best with IT and software companies that want stronger platform performance, a more predictable pipeline, or flexible offshore delivery capacity." },
-  { q: "How do you calculate commission?", a: "Where a package includes commission, I apply it only to net new revenue directly generated through our engagement, not to your existing accounts or self-sourced deals." },
+  { q: "How do you calculate commission?", a: "Where a package includes commission, I apply it only to net new revenue directly generated through our engagement, not to your existing accounts or self sourced deals." },
   { q: "Can I upgrade as my business grows?", a: "Yes. I can start with the most relevant engagement for your current stage and expand the scope as your pipeline, team, and goals develop." },
   { q: "What happens if I do not see results?", a: "I set clear deliverables and review progress with you regularly. My work is designed around measurable improvement, and I will adjust the strategy when the data shows something is not working." },
 ];
@@ -476,7 +476,7 @@ const BEFORE_CONTACT = [
   { icon: Lightbulb, title: "Tell me where you want to grow", desc: "I can use our first conversation more effectively when I understand your target market, preferred services, and the kind of clients you want to win." },
   { icon: ChartNoAxesColumn, title: "Share your current baseline", desc: "If you already have an Upwork or LinkedIn presence, I can analyze your current profile, performance, earnings, active contracts, and outreach results." },
   { icon: Crosshair, title: "Define your ideal client", desc: "When you tell me the industry, company size, geography, and project type you want to target, I can build a more focused strategy from the first call." },
-  { icon: WalletCards, title: "Be ready to invest in the right system", desc: "I can build a real pipeline, but consistent results require commitment to the right tools, positioning, outreach, and follow-through." },
+  { icon: WalletCards, title: "Be ready to invest in the right system", desc: "I can build a real pipeline, but consistent results require commitment to the right tools, positioning, outreach, and follow through." },
   { icon: ClipboardList, title: "Prepare a short company brief", desc: "A few lines about your services, technology, average project size, and past clients help me understand your business and recommend the fastest path forward." },
 ];
 
@@ -576,7 +576,7 @@ function HexMindMap() {
   const nodes = [
     { x: -200, y: -110, icon: <Target className="w-4 h-4" />, label: "Target Market", sub: null, side: "left" },
     { x: -210, y: 10, icon: <FileText className="w-4 h-4" />, label: "Proposal Strategy", sub: null, side: "left" },
-    { x: -195, y: 130, icon: <MessageCircle className="w-4 h-4" />, label: "Client Follow-Up", sub: null, side: "left" },
+    { x: -195, y: 130, icon: <MessageCircle className="w-4 h-4" />, label: "Client Follow Up", sub: null, side: "left" },
     { x: 200, y: -110, icon: <Users className="w-4 h-4" />, label: "Qualified Prospect", sub: "● Ready", subColor: "#22c55e", side: "right" },
     { x: 210, y: 10, icon: <TrendingUp className="w-4 h-4" />, label: "New Opportunity", sub: "● In Progress", subColor: "#22c55e", side: "right" },
     { x: 195, y: 130, icon: <Clock className="w-4 h-4" />, label: "Fast Response", sub: "● Managed", subColor: "#22c55e", side: "right" },
@@ -1039,13 +1039,12 @@ export default function Home() {
 
       {/* WHATSAPP */}
       <motion.a href="https://wa.me/923204116821" target="_blank" rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 rounded-full text-white text-sm font-semibold shadow-2xl no-underline"
-        style={{ backgroundColor: "#25D366" }}
+        aria-label="Open WhatsApp chat" title="Open WhatsApp chat"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 no-underline"
         whileHover={{ scale: 1.08, boxShadow: "0 8px 32px rgba(37,211,102,0.4)" }}
         whileTap={{ scale: 0.96 }}
         initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 }}>
-        <MessageCircle className="w-5 h-5" />
-        <span className="hidden sm:inline">WhatsApp Me</span>
+        <img src="/whatsapp-icon.png" alt="" className="w-14 h-14 object-contain" />
       </motion.a>
 
       {/* ── NAVBAR (hexaa.ai style) ── */}
@@ -1273,7 +1272,7 @@ export default function Home() {
                   animate={{ rotate: 360 }} transition={{ duration: 8, repeat: Infinity, ease: "linear" }} />
                 <div className="w-32 h-32 sm:w-52 sm:h-52 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 relative z-10"
                   style={{ borderColor: "#318B43", boxShadow: "0 20px 60px rgba(49,139,67,0.25)" }}>
-                  <img src="/abdullah-nobg.png" alt="Abdullah M. Asghar, Upwork Expert and BD Leader" className="w-full h-full object-cover object-top" />
+                  <img src="/abdullah-profile.jpg" alt="Abdullah M. Asghar, Upwork Expert and BD Leader" className="w-full h-full object-cover object-top" />
                 </div>
                 <motion.div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-white whitespace-nowrap z-10"
                   style={{ backgroundColor: "#318B43" }}
@@ -1355,7 +1354,7 @@ export default function Home() {
               <div className="space-y-4">
                 {[
                    { icon: "01", title: "I can clarify your market position", desc: "I can help you present your services in a way that makes your expertise easier for international buyers to understand and trust." },
-                   { icon: "02", title: "I can create a stronger route to revenue", desc: "I can combine platform optimization, targeted outreach, and better follow-up so your team has more than one way to create qualified conversations." },
+                   { icon: "02", title: "I can create a stronger route to revenue", desc: "I can combine platform optimization, targeted outreach, and better follow up so your team has more than one way to create qualified conversations." },
                    { icon: "03", title: "I can make your growth process repeatable", desc: "I can turn scattered business development activity into a practical system with clear priorities, ownership, and measurable progress." },
                    { icon: "04", title: "I can help you reach global clients", desc: "I can connect your strengths to the platforms, markets, and decision-makers most relevant to your next stage of growth." },
                 ].map((item, i) => (
@@ -1430,7 +1429,7 @@ export default function Home() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-14">
             <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "#e8f5eb", color: "#318B43" }}>How I Can Help</span>
             <h2 className="text-4xl font-bold mb-4" style={{ color: "#034751" }}>
-              Six High-Impact Services.{" "}
+              Six High Impact Services.{" "}
               <SquiggleUnderline><span style={{ color: "#318B43" }}>One Accountable Partner.</span></SquiggleUnderline>
             </h2>
             <p className="text-base max-w-2xl mx-auto" style={{ color: "#4a6b70" }}>
@@ -1556,7 +1555,7 @@ export default function Home() {
               <SquiggleUnderline><span style={{ color: "#318B43" }}>Running With Clarity</span></SquiggleUnderline>
             </h2>
             <p className="text-base max-w-2xl mx-auto" style={{ color: "#4a6b70" }}>
-              I can manage the moving parts of your business development process—from targeting and outreach to proposals, follow-up, and talent coordination—so you can stay focused on delivery.
+            I can manage the moving parts of your business development process, from targeting and outreach to proposals, follow up, and talent coordination, so you can stay focused on delivery.
             </p>
           </motion.div>
           <HexMindMap />
@@ -1610,7 +1609,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 px-8 py-4 font-bold rounded-full no-underline"
                 style={{ color: "#ffffff", border: "2px solid rgba(255,255,255,0.5)" }}
                 whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.9)", backgroundColor: "rgba(255,255,255,0.1)" }} whileTap={{ scale: 0.97 }}>
-                <MessageCircle className="w-4 h-4" /> WhatsApp Me Now
+                <MessageCircle className="w-4 h-4" /> WhatsApp Now
               </motion.a>
             </div>
           </motion.div>
@@ -1966,7 +1965,7 @@ export default function Home() {
                     className="flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold no-underline rounded-full"
                     style={{ backgroundColor: "transparent", color: "#318B43", border: "1.5px solid #318B43" }}
                     whileHover={{ backgroundColor: "#318B43", color: "#fff" }} whileTap={{ scale: 0.97 }}>
-                    <MessageCircle className="w-4 h-4" /> Or Message on WhatsApp
+                    <MessageCircle className="w-4 h-4" /> WhatsApp Now
                   </motion.a>
                 </>)}
               </motion.form>
@@ -1986,7 +1985,7 @@ export default function Home() {
             style={{ backgroundImage: "radial-gradient(circle at 20% 50%, #318B43 0%, transparent 60%), radial-gradient(circle at 80% 50%, #2575FC 0%, transparent 60%)" }} />
           <div className="relative z-10 max-w-3xl mx-auto px-4">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">Ready to Build Your Next Growth Channel?</h3>
-            <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Tell me where you want to improve—platform growth, lead generation, team scaling, or outsourcing—and I will help you define the right next step.</p>
+            <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Tell me where you want to improve, platform growth, lead generation, team scaling, or outsourcing, and I will help you define the right next step.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <motion.a href="#contact" onClick={e => { e.preventDefault(); scrollTo("#contact"); }}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white no-underline rounded-full text-sm"
@@ -1998,7 +1997,7 @@ export default function Home() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold no-underline rounded-full text-sm"
                 style={{ border: "1.5px solid rgba(255,255,255,0.4)", color: "#ffffff" }}
                 whileHover={{ backgroundColor: "rgba(255,255,255,0.12)", scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <MessageCircle className="w-4 h-4" /> WhatsApp Me Now
+                <MessageCircle className="w-4 h-4" /> WhatsApp Now
               </motion.a>
             </div>
           </div>
@@ -2011,7 +2010,6 @@ export default function Home() {
             {/* Column 1: Brand + About */}
             <div className="lg:col-span-1">
               <a href="#home" onClick={e => { e.preventDefault(); scrollTo("#home"); }} className="no-underline flex items-center gap-3 mb-4">
-                <img src="/logo.png" alt="AMA Logo" className="w-10 h-10 object-contain" />
                 <span className="text-xl font-bold text-white">
                   abdullah<span style={{ color: "#6ee893" }}>.</span>
                 </span>
