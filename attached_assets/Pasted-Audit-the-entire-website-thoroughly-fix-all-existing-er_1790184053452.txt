@@ -1,0 +1,82 @@
+Audit the entire website thoroughly, fix **all existing errors, bugs, broken functionality, layout issues, responsiveness problems, console errors, performance issues, and UI inconsistencies**, and make the website fully **production-ready for deployment**.
+
+### 1. Full Website Audit & Bug Fixes
+
+* Review every page, section, component, button, link, form, animation, and interactive element.
+* Fix all functional and visual errors.
+* Resolve all console errors and warnings that can affect production.
+* Fix broken links, missing assets, incorrect imports, routing issues, and component errors.
+* Check all responsive breakpoints and ensure the website works correctly across desktop, tablet, and mobile.
+* Fix spacing, alignment, typography, overflow, sizing, and other UI inconsistencies.
+* Remove unnecessary code, unused components, unused dependencies, and redundant assets where appropriate.
+* Optimize loading speed and overall performance without changing the existing design unnecessarily.
+* Ensure there are no obvious accessibility or usability issues.
+* Verify that all existing functionality continues to work after the fixes.
+
+### 2. Hero Section – Rotating Titles
+
+Replace the current **hero section title** with the following titles.
+
+The title should automatically change **every 4 seconds** and continue rotating indefinitely:
+
+1. Want to 3X Your B2B or Upwork Revenue?
+2. Ready to 3X Your Current B2B Revenue?
+3. Turn Your B2B Business Into a 3X Revenue Engine
+4. 3X Your B2B Revenue With a Smarter Growth Strategy
+5. Want More Revenue From Your B2B Business or Upwork Profile?
+6. From Current Revenue to 3X Growth — Let’s Build It
+7. Unlock 3X Revenue Growth for Your B2B Business
+8. 3X Your Upwork Revenue With a Proven Growth System
+9. Scale Your B2B Business From Where You Are to 3X
+10. Is Your B2B Business Ready for 3X Revenue Growth?
+11. Stop Leaving Revenue on the Table — Target 3X Growth
+12. Build a Predictable 3X Revenue Pipeline
+13. Turn Your Upwork Profile Into a Revenue-Generating Machine
+14. 3X Your Client Acquisition. 3X Your Revenue Potential.
+15. Want to Go From Inconsistent Leads to 3X Revenue?
+16. What Would 3X Revenue Do for Your Business?
+17. Your Next 3X Revenue Growth Starts Here
+18. You Have the Skills. Let’s Build 3X the Revenue.
+19. From Profile Views to Clients. From Clients to 3X Revenue.
+20. Your Business Doesn’t Need More Effort — It Needs More Revenue.
+
+### 3. Hero Animation
+
+* Change the title automatically every **4 seconds**.
+* Use a smooth, professional transition between titles.
+* Keep the animation subtle and fast enough that it doesn't distract from the hero section.
+* Prevent layout jumping when titles have different lengths.
+* Make sure long titles remain properly aligned and responsive.
+* The rotation must work consistently on desktop, tablet, and mobile.
+* Do not affect the existing hero CTA buttons, subtitle, background, or other hero elements unless required for proper responsiveness.
+
+### 4. Logo Visibility
+
+Remove/hide the **website logo completely on tablet and mobile versions**.
+
+Requirements:
+
+* Logo should remain visible on desktop.
+* Logo should not appear anywhere in the tablet or mobile header/navigation.
+* Ensure removing the logo does not create unwanted empty space or break header alignment.
+* Make the mobile and tablet navigation remain visually balanced after removing the logo.
+
+### 5. Production & Deployment Readiness
+
+Before considering the task complete:
+
+* Run a complete production build.
+* Fix every build error and warning that could affect deployment.
+* Verify all routes/pages load correctly.
+* Verify responsive behavior across desktop, tablet, and mobile.
+* Verify the hero title rotation.
+* Verify navigation, buttons, forms, links, and animations.
+* Check for missing environment variables or deployment configuration issues.
+* Ensure assets load correctly in production.
+* Remove development-only/debug code where appropriate.
+* Optimize the website for production performance.
+* Do not introduce unnecessary design changes.
+
+### Final Requirement
+
+Do not stop after fixing the first few issues. **Inspect the entire website systematically and resolve all issues you find.** The final result should be a clean, stable, responsive, optimized, and **deployment-ready production website** with the new rotating hero titles and the logo hidden on tablet and mobile.

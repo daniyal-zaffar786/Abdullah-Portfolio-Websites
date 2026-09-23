@@ -20,14 +20,38 @@ const NAV_LINKS = [
 const PLATFORMS = ["Upwork", "Fiverr", "Freelancer.com", "Guru", "PeoplePerHour"];
 
 const HERO_ROLES = [
-  "Senior Business Development Partner",
-  "Upwork Services Partner",
-  "Senior B2B Sales Strategist",
-  "Staff Augmentation Specialist",
-  "Software Development Partner",
-  "AI & Automation Consultant",
-  "Lead Generation Expert",
-  "Client Acquisition Specialist",
+  "Senior Staff Augmentation Specialist",
+  "B2B Lead Generation Specialist",
+  "Business Development Manager (BDM)",
+  "Business Development Representative (BDR)",
+  "Sales Development Representative (SDR)",
+  "B2B Sales Specialist",
+  "Lead Generation Specialist",
+  "B2B Account Executive",
+  "B2B Growth Specialist",
+];
+
+const HERO_TITLES = [
+  "Want to 3X Your B2B or Upwork Revenue?",
+  "Ready to 3X Your Current B2B Revenue?",
+  "Turn Your B2B Business Into a 3X Revenue Engine",
+  "3X Your B2B Revenue With a Smarter Growth Strategy",
+  "Want More Revenue From Your B2B Business or Upwork Profile?",
+  "From Current Revenue to 3X Growth — Let’s Build It",
+  "Unlock 3X Revenue Growth for Your B2B Business",
+  "3X Your Upwork Revenue With a Proven Growth System",
+  "Scale Your B2B Business From Where You Are to 3X",
+  "Is Your B2B Business Ready for 3X Revenue Growth?",
+  "Stop Leaving Revenue on the Table — Target 3X Growth",
+  "Build a Predictable 3X Revenue Pipeline",
+  "Turn Your Upwork Profile Into a Revenue-Generating Machine",
+  "3X Your Client Acquisition. 3X Your Revenue Potential.",
+  "Want to Go From Inconsistent Leads to 3X Revenue?",
+  "What Would 3X Revenue Do for Your Business?",
+  "Your Next 3X Revenue Growth Starts Here",
+  "You Have the Skills. Let’s Build 3X the Revenue.",
+  "From Profile Views to Clients. From Clients to 3X Revenue.",
+  "Your Business Doesn’t Need More Effort — It Needs More Revenue.",
 ];
 
 const WORLD_COUNTRIES = [
@@ -371,10 +395,66 @@ const PRICING_PLANS = [
 ];
 
 const TOOL_STACKS = [
-  { category: "Lead Generation", tools: "LinkedIn Sales Navigator, ZoomInfo, Apollo.io, Skrapp.io, ContactOut, SignalHire, Snow.io" },
+  { category: "Lead Generation", tools: "LinkedIn Sales Navigator, ZoomInfo, Apollo.io, Skrapp.io, ContactOut, SignalHire, Snov.io" },
   { category: "Email & Outreach", tools: "Instantly.ai, Mailchimp, ZeroBounce" },
   { category: "CRM & Sales Operations", tools: "Salesforce, HubSpot" },
   { category: "Automation & AI", tools: "AI-driven workflows, chatbots, and automated outreach sequences" },
+];
+
+const FOOTER_PLATFORM_GROUPS = [
+  {
+    label: "Research & ICP",
+    platforms: [
+      { name: "LinkedIn Sales Navigator", href: "https://www.linkedin.com/sales/navigator/" },
+      { name: "LinkedIn Jobs", href: "https://www.linkedin.com/jobs/" },
+      { name: "Apollo", href: "https://www.apollo.io/" },
+      { name: "ZoomInfo", href: "https://www.zoominfo.com/" },
+      { name: "Crunchbase", href: "https://www.crunchbase.com/" },
+      { name: "Clutch", href: "https://clutch.co/" },
+      { name: "Clay", href: "https://www.clay.com/" },
+      { name: "BuiltWith", href: "https://builtwith.com/" },
+    ],
+  },
+  {
+    label: "Data & Contact Discovery",
+    platforms: [
+      { name: "Wellfound", href: "https://wellfound.com/" },
+      { name: "Clearbit", href: "https://clearbit.com/" },
+      { name: "Seamless.AI", href: "https://seamless.ai/" },
+      { name: "LeadIQ", href: "https://leadiq.com/" },
+      { name: "UpLead", href: "https://www.uplead.com/" },
+      { name: "Hunter", href: "https://hunter.io/" },
+      { name: "Snov.io", href: "https://snov.io/" },
+      { name: "ContactOut", href: "https://contactout.com/" },
+      { name: "SignalHire", href: "https://www.signalhire.com/" },
+      { name: "Kaspr", href: "https://kaspr.io/" },
+      { name: "SalesQL", href: "https://salesql.com/" },
+    ],
+  },
+  {
+    label: "Outreach & Follow Up",
+    platforms: [
+      { name: "Instantly", href: "https://instantly.ai/" },
+      { name: "Smartlead", href: "https://smartlead.ai/" },
+      { name: "Lemlist", href: "https://www.lemlist.com/" },
+      { name: "Reply.io", href: "https://reply.io/" },
+      { name: "HubSpot", href: "https://www.hubspot.com/" },
+      { name: "Salesforce", href: "https://www.salesforce.com/" },
+    ],
+  },
+  {
+    label: "Talent & Remote",
+    platforms: [
+      { name: "We Work Remotely (WWR)", href: "https://weworkremotely.com/" },
+      { name: "Remote OK", href: "https://remoteok.com/" },
+      { name: "FlexJobs", href: "https://www.flexjobs.com/" },
+      { name: "Upwork", href: "https://www.upwork.com/" },
+      { name: "Fiverr", href: "https://www.fiverr.com/" },
+      { name: "Freelancer.com", href: "https://www.freelancer.com/" },
+      { name: "Guru", href: "https://www.guru.com/" },
+      { name: "PeoplePerHour", href: "https://www.peopleperhour.com/" },
+    ],
+  },
 ];
 
 const WHY_ME = [
@@ -859,6 +939,7 @@ export default function Home() {
     }
   });
   const [heroRoleIndex, setHeroRoleIndex] = useState(0);
+  const [heroTitleIndex, setHeroTitleIndex] = useState(0);
   const [formData, setFormData] = useState({ fullName: "", company: "", email: "", phone: "", message: "" });
   const [selectedCountry, setSelectedCountry] = useState("");
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
@@ -928,6 +1009,13 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const timer = window.setInterval(() => {
+      setHeroTitleIndex(index => (index + 1) % HERO_TITLES.length);
+    }, 4000);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
       const sections = NAV_LINKS.map(l => l.href.replace("#", ""));
@@ -963,19 +1051,24 @@ export default function Home() {
       {/* ── NAVBAR (hexaa.ai style) ── */}
       <motion.nav initial={{ y: -80 }} animate={{ y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-40 transition-all duration-300"
-        style={{
-          backgroundColor: scrolled ? "#ffffff" : "rgba(255,255,255,0.92)",
+         style={{
+           backgroundColor: scrolled ? "#ffffff" : "rgba(248,255,254,0.72)",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",
           boxShadow: scrolled ? "0 1px 24px rgba(3,71,81,0.08)" : "none",
           borderBottom: scrolled ? "1px solid rgba(49,139,67,0.10)" : "none",
         }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-          {/* Deliberately brand-neutral header: name and logo stay in the page content/footer. */}
-          <div className="hidden md:block w-24" aria-hidden="true" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+          <a href="#home" onClick={e => { e.preventDefault(); scrollTo("#home"); }}
+            className="hidden lg:flex items-center gap-2.5 no-underline min-w-40">
+            <img src="/logo.png" alt="AMA Logo" className="w-9 h-9 object-contain" />
+            <span className="text-lg font-bold" style={{ color: "#034751" }}>
+              abdullah<span style={{ color: "#318B43" }}>.</span>
+            </span>
+          </a>
 
           {/* Centered nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {NAV_LINKS.map((link, i) => (
               <motion.a key={link.href} href={link.href}
                 onClick={e => { e.preventDefault(); scrollTo(link.href); }}
@@ -994,7 +1087,7 @@ export default function Home() {
           </div>
 
           {/* Theme + CTA */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden lg:flex items-center justify-end gap-2 min-w-40">
             <motion.button
               type="button"
               aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
@@ -1016,7 +1109,7 @@ export default function Home() {
             </motion.a>
           </div>
 
-          <div className="md:hidden flex items-center gap-1">
+          <div className="lg:hidden ml-auto flex items-center gap-1">
             <button
               type="button"
               aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
@@ -1035,7 +1128,7 @@ export default function Home() {
           {menuOpen && (
             <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t px-4 pb-4 pt-2 overflow-hidden"
+              className="lg:hidden border-t px-4 pb-4 pt-2 overflow-hidden"
               style={{ backgroundColor: "#ffffff", borderColor: "#e0f0e3" }}>
               {NAV_LINKS.map(link => (
                 <a key={link.href} href={link.href} onClick={e => { e.preventDefault(); scrollTo(link.href); }}
@@ -1054,7 +1147,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <section id="home" ref={heroRef}
         className="min-h-screen flex items-center pt-16 relative overflow-hidden"
-         style={{ minHeight: "clamp(760px, 100svh, 1080px)", background: "linear-gradient(135deg, #f8fffe 0%, #edfaf0 40%, #e8f4ff 100%)" }}>
+         style={{ minHeight: "clamp(700px, 100svh, 1080px)", background: "linear-gradient(135deg, #f8fffe 0%, #edfaf0 48%, #e8f4ff 100%)" }}>
         <AmbientVideo
           src="/animations/hero-network.mp4"
           poster="/animations/hero-network.jpg"
@@ -1074,19 +1167,19 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20 w-full relative z-10">
-          {/* Mobile: stacked; Desktop: side-by-side */}
-          <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-12 items-center gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-14 lg:py-20 w-full relative z-10">
+          {/* Mobile: stacked; tablet and desktop: side-by-side */}
+          <div className="flex flex-col md:grid md:grid-cols-2 md:gap-8 lg:gap-12 items-center gap-6">
 
             {/* ── LEFT: Text content ── */}
-            <div className="w-full text-center lg:text-left order-1 lg:order-1">
+            <div className="w-full text-center md:text-left order-1 md:order-1">
               {/* Slug badge */}
               <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-                className="flex flex-wrap justify-center lg:justify-start gap-2 mb-4 sm:mb-5">
+                className="flex flex-wrap justify-center md:justify-start gap-2 mb-4 sm:mb-5">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold"
                   style={{ backgroundColor: "#034751", color: "#ffffff" }}>
                   <span className="w-2 h-2 rounded-full animate-pulse flex-shrink-0" style={{ backgroundColor: "#6ee893" }} />
-                   Your Business Development Partner
+                    B2B Growth & Talent Partner
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium"
                   style={{ backgroundColor: "#e8f5eb", color: "#318B43", border: "1px solid #c3e6cb" }}>
@@ -1095,19 +1188,22 @@ export default function Home() {
               </motion.div>
 
               <motion.h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-3 sm:mb-4"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-3 sm:mb-4 min-h-[10rem] sm:min-h-[9rem] md:min-h-[10rem] lg:min-h-[13rem] flex items-center"
                 style={{ color: "#034751" }}>
-                {["I Build Growth Systems.", "I Win Better Work.", "I Scale IT Teams."].map((word, i) => (
-                  <motion.span key={word} className="block"
-                    initial={false} animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.35, delay: i * 0.04, ease: "easeOut" }}
-                    style={i === 1 ? { color: "#318B43" } : {}}>
-                    {word}
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.span
+                    key={HERO_TITLES[heroTitleIndex]}
+                    className="block w-full"
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -14 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}>
+                    {HERO_TITLES[heroTitleIndex]}
                   </motion.span>
-                ))}
+                </AnimatePresence>
               </motion.h1>
 
-              <div className="h-8 sm:h-10 mb-3 sm:mb-4 overflow-hidden flex justify-center lg:justify-start items-center">
+              <div className="min-h-8 sm:min-h-10 mb-3 sm:mb-4 flex justify-center md:justify-start items-center">
                 <AnimatePresence mode="wait">
                   <motion.p
                     key={HERO_ROLES[heroRoleIndex]}
@@ -1115,38 +1211,32 @@ export default function Home() {
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     exit={{ opacity: 0, y: -18, filter: "blur(5px)" }}
                     transition={{ duration: 0.45, ease: "easeOut" }}
-                    className="text-base sm:text-lg font-semibold"
+                    className="text-sm sm:text-lg font-semibold text-center md:text-left"
                     style={{ color: "#318B43" }}>
                     {HERO_ROLES[heroRoleIndex]}
                   </motion.p>
                 </AnimatePresence>
               </div>
 
-              {/* Keyword slug line */}
               <motion.p initial={false} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}
-                className="text-xs sm:text-sm font-semibold tracking-wide mb-4 sm:mb-5 flex flex-wrap justify-center lg:justify-start gap-x-3 gap-y-1"
+                className="text-xs sm:text-sm font-semibold tracking-wide mb-4 sm:mb-5 text-center md:text-left"
                 style={{ color: "#318B43" }}>
-                {["Upwork Optimization", "Lead Generation", "LinkedIn Outreach", "Staff Augmentation", "IT Outsourcing"].map((kw, i) => (
-                  <span key={kw} className="flex items-center gap-1">
-                    {i > 0 && <span style={{ color: "#c3e6cb" }}>·</span>}
-                    {kw}
-                  </span>
-                ))}
+                Strategy, systems, and execution for B2B growth, qualified pipeline, and senior tech talent.
               </motion.p>
 
               <motion.p initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-                className="text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0" style={{ color: "#4a6b70" }}>
-                 I can help you generate enterprise leads, build scalable offshore teams through <strong style={{ color: "#034751" }}>staff augmentation</strong>, and win better work through <strong style={{ color: "#318B43" }}>Upwork</strong> and <strong style={{ color: "#034751" }}>LinkedIn</strong>.
+                className="text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto md:mx-0" style={{ color: "#4a6b70" }}>
+                I help IT and software companies find qualified B2B conversations, win better clients, and build flexible senior technical teams through <strong style={{ color: "#318B43" }}>staff augmentation</strong>.
               </motion.p>
 
               <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-                className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3 mb-6 sm:mb-8">
+                className="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-3 mb-6 sm:mb-8">
                 <motion.a href="#contact" onClick={e => { e.preventDefault(); scrollTo("#contact"); }}
                   className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 text-sm sm:text-base font-semibold text-white no-underline w-full sm:w-auto"
                   style={{ backgroundColor: "#318B43", borderRadius: "50px" }}
                   whileHover={{ scale: 1.04, backgroundColor: "#276e35", boxShadow: "0 8px 24px rgba(49,139,67,0.35)" }}
                   whileTap={{ scale: 0.97 }}>
-                   Book a Free Strategy Call <ArrowRight className="w-4 h-4" />
+                   Let's Talk <ArrowRight className="w-4 h-4" />
                 </motion.a>
                 <motion.a href="https://wa.me/923204116821" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 text-sm sm:text-base font-semibold text-white no-underline w-full sm:w-auto"
@@ -1158,7 +1248,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div initial={false} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}
-                className="flex flex-wrap justify-center lg:justify-start gap-2">
+                className="hidden sm:flex flex-wrap justify-center md:justify-start gap-2">
                 {PLATFORMS.map((p, i) => (
                   <motion.span key={p} className="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full"
                     style={{ border: "1px solid #d0e8d3", color: "#034751", backgroundColor: "#f8fffe" }}
@@ -1173,7 +1263,7 @@ export default function Home() {
 
             {/* ── RIGHT: Photo + Stats ── */}
             <motion.div style={{ y: heroY, opacity: heroOpacity }}
-              className="flex flex-col items-center gap-6 w-full order-2 lg:order-2">
+              className="flex flex-col items-center gap-6 w-full order-2 md:order-2">
 
               {/* Photo */}
               <motion.div initial={{ opacity: 0, scale: 0.85, rotate: -3 }} animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -1181,7 +1271,7 @@ export default function Home() {
                 <motion.div className="absolute -inset-2 rounded-full opacity-30"
                   style={{ background: "conic-gradient(from 0deg, #318B43, #2575FC, #034751, #318B43)" }}
                   animate={{ rotate: 360 }} transition={{ duration: 8, repeat: Infinity, ease: "linear" }} />
-                <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 relative z-10"
+                <div className="w-32 h-32 sm:w-52 sm:h-52 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 relative z-10"
                   style={{ borderColor: "#318B43", boxShadow: "0 20px 60px rgba(49,139,67,0.25)" }}>
                   <img src="/abdullah-nobg.png" alt="Abdullah M. Asghar, Upwork Expert and BD Leader" className="w-full h-full object-cover object-top" />
                 </div>
@@ -1193,7 +1283,7 @@ export default function Home() {
               </motion.div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-xs sm:max-w-sm mt-4 sm:mt-6">
+                <div className="hidden sm:grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-xs sm:max-w-sm mt-4 sm:mt-6">
                 {[{ value: 8, suffix: "+", label: "Years on Upwork" }, { value: 5, suffix: "+", label: "Years Leading B2B Sales" },
                   { value: 196, suffix: "+", label: "Professionals Supported" }, { value: 5, suffix: "", label: "Global Platforms" }].map((stat, i) => (
                   <motion.div key={stat.label} className="rounded-xl p-3 sm:p-4 text-center border"
@@ -1999,15 +2089,6 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <h4 className="text-sm font-bold text-white mb-3 uppercase tracking-wider">Platforms</h4>
-              <div className="flex flex-wrap gap-2">
-                {["Upwork", "Fiverr", "LinkedIn", "Guru", "PeoplePerHour"].map(p => (
-                  <span key={p} className="px-2.5 py-1 rounded-full text-xs"
-                    style={{ backgroundColor: "rgba(49,139,67,0.2)", color: "#6ee893", border: "1px solid rgba(49,139,67,0.35)" }}>
-                    {p}
-                  </span>
-                ))}
-              </div>
             </div>
 
             {/* Column 4: Contact */}
@@ -2050,6 +2131,34 @@ export default function Home() {
                 </div>
               <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>I respond to every message within 24 hours. WhatsApp is the fastest way to reach me.</p>
               </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-4 mt-12 pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+              <div>
+                <h4 className="text-sm font-bold text-white uppercase tracking-wider">Platforms</h4>
+                <p className="text-xs mt-1" style={{ color: "rgba(255,255,255,0.48)" }}>
+                  The research, prospecting, outreach, and talent platforms I use to build qualified B2B opportunities.
+                </p>
+              </div>
+              <span className="text-xs font-medium" style={{ color: "#6ee893" }}>Research, reach, and revenue</span>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {FOOTER_PLATFORM_GROUPS.map(group => (
+                <div key={group.label}>
+                  <h5 className="text-xs font-semibold mb-3" style={{ color: "rgba(255,255,255,0.72)" }}>{group.label}</h5>
+                  <div className="flex flex-wrap gap-x-3 gap-y-2">
+                    {group.platforms.map(platform => (
+                      <a key={platform.name} href={platform.href} target="_blank" rel="noopener noreferrer"
+                        className="text-xs no-underline hover:underline"
+                        style={{ color: "rgba(255,255,255,0.52)" }}>
+                        {platform.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

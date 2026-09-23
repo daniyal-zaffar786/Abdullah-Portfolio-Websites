@@ -1,0 +1,92 @@
+Analyze the attached/current website and redesign the entire Hero Section, including the Header/Navbar, using the same overall size, spacing, visual pattern, layout structure, proportions, and premium feel as the MentorSol website: https://mentorsol.com/
+
+
+
+Do NOT copy their content, branding, logo, images, or exact design. Instead, use MentorSol only as a visual/layout reference and adapt the concept to my website’s existing branding, colors, typography, and content.
+
+Header + Hero
+
+Make the header part of the hero section with a clean, premium, modern layout.
+
+Match the reference website’s overall header height, spacing, alignment, navigation structure, and responsive behavior.
+
+Ensure the header and hero feel like one unified section, not two separate blocks.
+
+Recreate the same visual balance, whitespace, proportions, and polished SaaS/IT-company appearance.
+
+Keep my existing logo and branding.
+
+Make the navigation fully responsive on desktop, tablet, and mobile.
+
+Hero Content
+
+Use this positioning/message:
+
+
+
+Headline:
+“Need More B2B Clients, Qualified Leads & Senior Tech Talent? Let’s 10X Your Growth.”
+
+
+
+Position the headline prominently with strong typography and excellent visual hierarchy.
+
+
+
+Add a concise supporting statement focused on:
+
+
+
+Senior Staff Augmentation Specialist 
+
+B2B Lead Generation Specialist 
+
+Business Development Manager (BDM) 
+
+Business Development Representative (BDR) 
+
+Sales Development Representative (SDR) 
+
+B2B Sales Specialist 
+
+Lead Generation Specialist 
+
+B2B Account Executive 
+
+B2B Growth Specialist 
+
+
+
+Add a prominent “Let’s Talk” CTA button and style it with the same visual weight, size, spacing, rounded shape, hover effect, and placement concept as the reference website.
+
+Background & Visual Pattern
+
+Recreate a similarly sophisticated background treatment/pattern without copying proprietary assets.
+
+Add subtle animations, gradients, abstract elements, or floating visual patterns that fit my brand.
+
+Keep animations smooth, lightweight, and professional.
+
+Avoid excessive motion that hurts readability or performance.
+
+Make sure all background elements remain behind the content and never overlap the headline, navigation, or CTA.
+
+Responsive & Technical Requirements
+
+The complete Header + Hero must fit perfectly within the first viewport.
+
+Ensure there is no unwanted horizontal scrolling.
+
+Prevent text, buttons, images, or background animations from overflowing.
+
+Maintain perfect spacing and alignment across desktop, tablet, and mobile.
+
+Make the hero visually balanced at common screen sizes.
+
+Optimize animations and assets for fast loading and smooth performance.
+
+Fix any existing layout, CSS, responsiveness, or console errors affecting this section.
+
+
+
+Most importantly, do not simply copy MentorSol. Use its professional composition, proportions, spacing, and visual hierarchy as inspiration while creating a unique Hero Section that belongs to my website and brand.
